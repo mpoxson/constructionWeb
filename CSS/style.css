@@ -1,0 +1,134 @@
+/*
+selector{
+    cssproperty:value;
+    more unforgiving than html
+    *=everything on page
+}
+*/
+/*!important overrides cascading natureof your styling rule
+body {
+  background-color: blanchedalmond !important;
+}
+
+*/
+
+/* @import url(font htps) */
+
+/*
+html attribute id for css selector
+#id{
+  color:red;
+  background-color: white;
+}
+
+.classname{
+  color=pink;
+}
+
+3. Selecting the adjacent sibling of a node
+
+  a. p + a{
+    ...
+  }
+  b. #navbar + a{
+...
+  }
+
+4. nonadjacent siblings (any sibling at that level)
+p ~ a {...}
+
+5. selecting the immediate child of a given tag (class/id are interchangable with tag)
+
+p > a {...}
+
+6. all child of a given tag
+
+p a {...}
+
+7. specifying dynamic css behavior based on the state of ui [psuedo classes]
+a{
+  color: black;
+  font-size: 24;
+}
+
+MUST BE SPECIFIED AFTER STATIC
+a:hover{
+  color: gold;
+  font-size:30px;
+}
+
+8. psuedo element dynamically rendering new html element within the dom
+
+a::after{
+  //added as element to the dom, javascript can do the same thing
+}
+*/
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style navbar */
+
+#page_header {
+  background-color: var(--font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-family: */
+}
+
+#navBar {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar a {
+  border: 1px solid;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: larger;
+  text-decoration: none;
+}
+
+body {
+  /* background-image: ""; */
+  /*background-repeat:*/
+  --main-color: #f2f6d0;
+  --sec-color: #36413e;
+  --font-color: #a6979c;
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--main-color);
+}
+
+.page_head {
+  color: var(--sec-color);
+  text-align: center;
+  font-size: 36px;
+}
+
+.page_subheader {
+  color: var(--sec-color);
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Tentative color scheme:
+majro : 
+font
+other */

@@ -1,0 +1,141 @@
+/* Reset all browser styling and choose alt box model option */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Style the layout of the navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(117, 225, 225);
+  color: #ffffff;
+}
+
+.nav-links a {
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 36px;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+/* psuedo class usage */
+.menu li:hover {
+  background-color: #4c4c4c;
+  border-radius: 5px;
+  /* Example of css transition */
+  transition: 0.3s ease;
+}
+
+.menu li {
+  /* Giving vertical and horizontal padding */
+  padding: 5px 14px;
+}
+
+/* dropdown menu */
+
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: bisque;
+  padding: 1em 0;
+  position: absolute; /*relative to parent */
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: blanchedalmond;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* responsive design using css media query*/
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: aqua;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: black;
+  }
+}
