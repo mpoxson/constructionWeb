@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="../CSS/responsiveNavbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!--Logo container-->
+      <div class="logo">LOGO</div>
+      <!--Navigation menu container-->
+      <ul class="nav-links">
+        <!--Hamburger menu icon and checkbox hack-->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!--Write out nav menu options-->
+        <div class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li class="services">
+            <a href="/">Services</a>
+            <!--Dropdown-->
+            <ul class="dropdown">
+              <li><a href="/">Plumbing</a></li>
+              <li><a href="/">Carpentry</a></li>
+              <li><a href="/">Electrician</a></li>
+              <li><a href="/">Landscaping</a></li>
+            </ul>
+          </li>
+          <li><a href="/">Pricing</a></li>
+          <li><a href="/">Contract</a></li>
+        </div>
+      </ul>
+    </nav>
+  </body>
+</html>
